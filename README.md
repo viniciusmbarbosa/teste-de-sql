@@ -1,6 +1,8 @@
 # Teste Feng Brasil *Vinicius de Miranda Barbosa*
 
-
+### sumário do teste
+* Criação da tabela
+* Resolvendo consultas
 ## Criando O banco de dados.
 ```sql
     CREATE DATABASE  feng_vini CHARACTER SET utf8mb4;
@@ -47,6 +49,8 @@ CREATE TABLE base_cobranças(
 ```
 ![1](./img/tabela-contratos.png)
 
+#### Formatação da tabela.
+![1](./img/tabela-principal.png)
 
 ###### este comando está alterando a coluna data_nascimento na tabela base_assinantes, tornando-a do tipo "DATETIME" Foi usando para teste de tipo da tabela.
 ```sql
@@ -147,3 +151,7 @@ LIMIT 1;
 ![1](./img/04.jpeg)
 
 ### Obrigado pela oportunidade de participar do teste
+
+
+
+
