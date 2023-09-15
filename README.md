@@ -1,6 +1,7 @@
 # Teste Feng Brasil *Vinicius de Miranda Barbosa*
 
-### sumário do teste
+### Sumário do teste
+
 * Criação da tabela
 * Resolvendo consultas
 ## Criando O banco de dados.
@@ -60,7 +61,7 @@ ALTER TABLE `base_assinantes` CHANGE `data_nascimento` `data_nascimento` DATETIM
 ```
 
 
-==================================================================================================
+=============================================================================================
 
 ## consultas
 
@@ -149,6 +150,8 @@ LIMIT 1;
 
 ```
 ![1](./img/04.jpeg)
+
+## Fim
 
 ### Obrigado pela oportunidade de participar do teste
 
