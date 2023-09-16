@@ -17,21 +17,21 @@ CREATE TABLE base_assinantes(
     sexo CHAR(1) NOT NULL,
     data_nascimento DATETIME NULL,
     estado_civil VARCHAR(20),
-    escolaridade VARCHAR(20),
-    cidade VARCHAR(20),
-    uf CHAR(2)
+    escolaridade VARCHAR(50),
+    cidade VARCHAR(100),
+    uf VARCHAR(2)
 )DEFAULT CHARSET=utf8;
 ```
 ![1](./img/tabela-assinantes.png)
 ```sql
 CREATE TABLE base_contratos(
     idcontrato	INT NOT NULL PRIMARY KEY,
+    idassinante	INT NOT NULL,
     plano CHAR(1), 
     forma_pagamento	VARCHAR(60), 
     duracao_plano	INT,
     data_inicial	DATETIME,
     data_final	DATETIME,
-    idassinante	INT NOT NULL,
     CONSTRAINT fk_base_assinantes FOREIGN KEY (idassinante)  REFERENCES base_assinantes(idassinante)
  )DEFAULT CHARSET=utf8;
 ```
@@ -39,12 +39,12 @@ CREATE TABLE base_contratos(
 ```sql
 CREATE TABLE base_cobranças(
     idcobranca	INT NOT NULL PRIMARY KEY,
+    idcontrato	INT NOT NULL,
     status_parcela CHAR(2), 
     data_vencimento	DATETIME,
     data_pagamento	DATETIME,
     data_cancelamento DATETIME,
     valor_cobrança FLOAT(6,2),
-    idcontrato	INT NOT NULL,
     CONSTRAINT fk_base_contratos FOREIGN KEY (idcontrato)  REFERENCES base_contratos(idcontrato)
  )DEFAULT CHARSET=utf8;
 ```
